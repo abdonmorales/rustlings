@@ -3,7 +3,7 @@
 #Requires -Version 5
 param($path = "$home/rustlings")
 
-Write-Host "Let's get you set up with Rustlings!"
+Write-Host "Let's get you set up with Rustlings (git)!"
 
 Write-Host "Checking requirements..."
 if (Get-Command git -ErrorAction SilentlyContinue) {
@@ -63,7 +63,7 @@ if ((vercomp $rustVersion $minRustVersion) -eq 2) {
 }
 
 Write-Host "Cloning Rustlings at $path"
-git clone -q https://github.com/rust-lang/rustlings $path
+git clone -q https://github.com/abdonmorales/rustlings $path
 if (!($LASTEXITCODE -eq 0)) {
     exit 1
 }

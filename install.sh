@@ -137,7 +137,7 @@ fi
 
 Path=${1:-rustlings/}
 echo "Cloning Rustlings at $Path..."
-git clone -q https://github.com/rust-lang/rustlings.git "$Path"
+git clone -q https://github.com/abdonmorales/rustlings.git "$Path"
 
 cd "$Path"
 
@@ -152,7 +152,7 @@ then
     if [[ -z ${Version}  ]]
     then
         echo "No valid tag version found"
-        echo "Rustlings will be installed using the main branch"
+        echo "Rustlings (Git) will be installed using the main branch"
         Version="main"
     else
         Version="tags/${Version}"
